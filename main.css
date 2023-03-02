@@ -888,7 +888,7 @@ body {
 
 .question {
   position: relative;
-  background: #8FBC8F;
+  background: #eee;
   margin: 0;
   padding: 10px 10px 10px 50px;
   display: block;
@@ -897,7 +897,7 @@ body {
 }
 
 .answers {
-  background: #999;
+  background: skyblue;
   padding: 0px 15px;
   margin: 5px 0;
   height: 0;
