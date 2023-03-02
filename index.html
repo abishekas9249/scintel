@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Name</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://allevents.in/scripts/public/ae-plugin-lib-button.js"></script>
+    <style>
+        * {
+          box-sizing: border-box
+        }
+        body {
+          font-family: Verdana, sans-serif;
+          margin: 0
+        }
+        .mySlides {
+          display: none
+        }
+        img {
+          vertical-align: middle;
+          height: 500px;
+          overflow: visible;
+        }
+        .slideshow-container {
+          width: 100%;
+          margin-top: 0px;
+          position: relative;
+        }
+        /* Caption text */
+        .text {
+          color: #ffffff;
+          font-size: 15px;
+          padding: 8px 12px;
+          position: absolute;
+          
+          width: 70%;
+          height: 70px;
+          background-color: rgba(113, 100, 100, 0.74);
+          text-align: center;
+          margin-top: -10%;
+          left: 15%;
+          
+        }
+        
+        .pic img{
+          color: #ffffff;
+          font-size: 15px;
+          padding: 4px 12px;
+          position: absolute;
+          margin-top: -50%;
+          bottom: 300px;
+          width: 50%;
+          height: 100px;
+          left: 25%;
+          text-align: center;
+           }
+        
+        /* Fading animation */
+        .fade {
+          -webkit-animation-name: fade;
+          -webkit-animation-duration: 1.5s;
+          animation-name: fade;
+          animation-duration: 1.5s;
+        }
+  
+        
+        @-webkit-keyframes fade {
+          from {
+            opacity: .4
+          }
+          to {
+            opacity: 1
+          }
+        }
+        @keyframes fade {
+          from {
+            opacity: .4
+          }
+          to {
+            opacity: 1
+          }
+        }
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+          .prev,
+          .next,
+          .text {
+            font-size: 11px
+          }
+        }
+      </style>
+</head>
+
+<body>
+
+
+    <header class="box-shadow">
+        <div class="section logo">
+          
+          <span class="green">SCINTEL</span>
+        </div>
+    
+        <div class="section">
+          <ul>
+            <li><a class="active" href="#experience">Events</a></li>
+            <li><a href="#sec">FAQ</a></li>
+            <li><a href="#contact">Contact us</a></li>
+            <li><a href="https://allevents.in/manage/tickets/book.php?event_id=80007682869946&hide_details=1"><button
+                data-event-id="80007682869946" data-ticket-id="5882872" class="ae-ticket-book-button">Register
+                Now</button></a></li>
+          </ul>
+        </div>
+      </header>
+
+
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+         
+          <img src="./intro.jpg" style="width:100%">
+          <div class="text1">
+               <div class="pic">
+              <img src="pic1.png" alt="">
+          </div> 
+      </div>
+          <div class="text">KNOWMEET2K23 is an offline flagship event hosted by the Knowledge Institute of Technology and organized by the Department of Computer Science and Engineering.Come and witness the power of learning and get to interact with some amazing techies</div>
+        </div>
+        <div class="mySlides fade">
+         
+          <img src="./intro.jpg" style="width:100%">
+          <div class="text1">
+              <div class="pic">
+                  <img src="pic1.png" alt="">
+              </div> 
+          </div>
+          <div class="text">KNOWMEET2K23 is an offline flagship event hosted by the Knowledge Institute of Technology and organized by the Department of Computer Science and Engineering.Come and witness the power of learning and get to interact with some amazing techies</div>
+        </div>
+        <div class="mySlides fade">
+                 <img src="./intro.jpg" style="width:100%">
+                 <div class="text1">
+                  <div class="pic">
+                      <img src="pic1.png" alt="">
+                  </div> 
+                 </div>
+                 <div class="text">KNOWMEET2K23 is an offline flagship event hosted by the Knowledge Institute of Technology and organized by the Department of Computer Science and Engineering.Come and witness the power of learning and get to interact with some amazing techies</div>
+        </div>
+        <div class="frame">
+  
+          <a href="https://allevents.in/manage/tickets/book.php?event_id=80007682869946&hide_details=1">  <button class="custom-btn btn-9">Register Now</button> </a>
+          
+            <button class="custom-btn btn-11">Read More<div class="dot"></div></button>
+          
+          </div>
+         </div>
+      <br>
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(0)"></span>
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+      </div>
+      <script>
+        let slideIndex = 0;
+        let timeoutId = null;
+        const slides = document.getElementsByClassName("mySlides");
+        const dots = document.getElementsByClassName("dot");
+       
+        showSlides();
+        function currentSlide(index) {
+             slideIndex = index;
+             showSlides();
+        }
+       function plusSlides(step) {
+         
+          if(step < 0) {
+              slideIndex -= 2;
+             
+              if(slideIndex < 0) {
+                slideIndex = slides.length - 1;
+              }
+          }
+         
+          showSlides();
+       }
+        function showSlides() {
+          for(let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+            dots[i].classList.remove('active');
+          }
+          slideIndex++;
+          if(slideIndex > slides.length) {
+            slideIndex = 1
+          }
+          slides[slideIndex - 1].style.display = "block";
+          dots[slideIndex - 1].classList.add('active');
+           if(timeoutId) {
+              clearTimeout(timeoutId);
+           }
+          timeoutId = setTimeout(showSlides, 5000); 
+        }
+      </script>
+    
+
+    <section id="experience">
+
+        <h1 class="section-heading mb75px">
+            <span>
+                <i class="fas fa-chalkboard-teacher"></i>
+            </span>
+            <span id="events"> Tech Event </span>
+        </h1>
+
+        <div class="timeline">
+
+            <div class="timeline-box ">
+                <div class="timeline-container">
+                    <div class="timeline-logo">
+                        <i class="fas fa-desktop" style="color: brown;"></i>
+                    </div>
+                    <h3 class="experience-designation  m0 m-blue"> Idea Presentation </h3>
+
+                    <p style="margin-top: 20px;" class="experience-description text-justify"> You will get a chance to
+                        showcase your unique idea which can solve a real-time problem and If our jury members found your
+                        idea is worth, then you will be funded for your unique idea? </p>
+                </div>
+            </div>
+
+            <div class="timeline-box right ">
+                <div class="timeline-container">
+                    <div class="timeline-logo">
+                        <i class="fas fa-desktop" style="color: brown;"></i>
+                    </div>
+                    <h3 class="experience-designation  m0 m-blue"> Tech Marathon </h3>
+
+                    <p style="margin-top: 20px;" class="experience-description text-justify"> It is a challenge where
+                        you will given with a set of problem that you have to solve before anyone completes
+
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-box left ">
+                <div class="timeline-container">
+                    <div class="timeline-logo">
+                        <i class="fas fa-desktop" style="color: brown;"></i>
+                    </div>
+                    <h3 class="experience-designation m0 m-blue" style="margin-right:-30px;"> Incognito Tech challenge </h3>
+
+
+                    <p style="margin-top: 20px;" class="experience-description text-justify"> There will be different
+                        types tech challenges which you have to solve within the given period of time </p>
+                </div>
+            </div>
+
+            <div class="timeline-box right ">
+                <div class="timeline-container">
+                    <div class="timeline-logo">
+                        <i class="fas fa-desktop" style="color: brown;"></i>
+                    </div>
+                    <h3 class="experience-designation  m0 m-blue"> Tech Quiz </h3>
+
+                    <p style="margin-top: 20px;" class="experience-description text-justify"> It will test your
+                        knowledge with respect to various technical aspects such a general computer science and
+                        programming languages </p>
+                </div>
+            </div>
+
+
+            <div id="timeline-divider">
+                <div class="timeline-traveller">
+                    <div>
+                        <i class="fas fa-plane"></i>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <a href="https://allevents.in/manage/tickets/book.php?event_id=80007682869946&hide_details=1"><button
+                data-event-id="80007682869946" data-ticket-id="5882872" class="ae-ticket-book-button">Register
+                Now</button></a>
+
+
+    </section>
+
+    <section id="education">
+
+        <h1 class="section-heading mb75px">
+            <span>
+                <i class="fas fa-puzzle-piece"></i>
+            </span>
+            <span> Non tech events </span>
+        </h1>
+
+        <div class="timeline">
+
+            <div class="timeline-box left ">
+                <div class="timeline-container">
+                    <div class="timeline-logo">
+                        <i class="fas fa-camera-retro" style="color: brown;"></i>
+                    </div>
+                    <h3 class="experience-designation  m0 m-blue"> Ad shoot </h3>
+ <br>
+                    <p class="experience-description text-justify"> Showcase your amazing videography skill to the audience and get recognized by participating in Ad shoot and showcase your creativity infront of our Jury members</p>
+                </div>
+            </div>
+
+            <div class="timeline-box right ">
+                <div class="timeline-container">
+                    <div class="timeline-logo">
+                        <i class="fas fa-fire" style="color: brown;"></i>
+                    </div>
+                    <h3 class="experience-designation  m0 m-blue"> Treasure hunt </h3>
+                    <br>
+                    <p class="experience-description text-justify">It is one of the most fun activity where you will witness joy and it will tease your mind to find the treasure</p>
+                </div>
+            </div>
+
+            <div class="timeline-box left ">
+                <div class="timeline-container">
+                    <div class="timeline-logo">
+                        <i class="fas fa-user-secret" style="color: brown;"></i>
+                    </div>
+                    <h3 class="experience-designation  m0 m-blue"> Riddle mafia </h3>
+
+<br>
+                    <p class="experience-description text-justify">Riddle Mafia is a fun and knowledge event and it is in such a way that you can learn something new and have fun at the same time </p>
+                </div>
+            </div>
+
+            <div class="timeline-box right ">
+                <div class="timeline-container">
+                    <div class="timeline-logo">
+                        <i class="	fas fa-brain" style="color: brown;"></i></div>
+                    <h3 class="experience-designation  m0 m-blue"> Memory teasing </h3>
+                    <br>
+                    <p class="experience-description text-justify"> Memory teasing is a fun activity that going to challenge your memory and you will get compete with other fellow mates </p>
+                </div>
+            </div>
+
+            <div id="timeline-divider">
+                <div class="timeline-traveller">
+                    <div>
+                        <i class="fas fa-car-side"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <a href="https://allevents.in/manage/tickets/book.php?event_id=80007682869946&hide_details=1"><button
+                data-event-id="80007682869946" data-ticket-id="5882872" class="ae-ticket-book-button">Register
+                Now</button></a>
+
+
+    </section>
+
+    <section id="portfolio">
+        <h1 class="section-heading mb75px">
+            <span>
+                <i class="fas fa-th-list"></i>
+            </span>
+            <span> Workshop </span>
+        </h1>
+
+
+
+        <div id="portfolio-container">
+            <p style="margin-top: 150px; font-weight: bol;">
+                Front-end Mania
+            </p>
+
+            <div class="portfolio-image-container">
+                <img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000025_1550237330_codezen_2.png">
+
+                <div class="portfolio-details">
+                    <p>
+                        It is one of most promising career in which each and every industry is looking for folks who can
+                        develop some amazing front-end and we've got you covered in this workshop where you get to build
+                        some amazing front-end website that will blow your mind
+                    </p>
+                </div>
+
+            </div>
+            <p style="margin-top: 150px;">
+                Block chain
+            </p>
+            <div class="portfolio-image-container">
+                <img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000025_1550237330_codezen_2.png">
+                <div class="portfolio-details">
+                    <p>
+                        One of the most trending and important skill set in 21st century. Come and join us for this
+                        amazing blockchain workshop where you get to learn some real time insights and hands on project
+                    </p>
+                </div>
+
+            </div>
+
+
+        </div>
+        <a href="https://allevents.in/manage/tickets/book.php?event_id=80007682869946&hide_details=1"><button
+            data-event-id="80007682869946" data-ticket-id="5882872" class="ae-ticket-book-button">Register
+            Now</button></a>
+
+
+        <!-- <a target="make_resume_responsive (1)" ><button class="BUTTON" onclick="openPopup()">Proceed to Pay
+        </button></a>
+
+            <iframe name="make_resume_responsive (1)" src="https://allevents.in/manage/tickets/book.php?event_id=80007682869946&hide_details=1"
+            class="popup" id="popup" style="position:absolute; border: none; width:600px; height:600px; overflow-x:hidden; overflow-y: hidden;"></iframe>
+        
+            <button class="BUTTON" onclick="closePopup()"> Ok </button>
+
+        <script>
+            let popup = document.getElementById("popup");
+            function openPopup() {
+                popup.classList.add("openpopup");
+            }
+            function closePopup() {
+                popup.classList.remove("openpopup")
+            }
+
+        </script> -->
+
+
+    </section>
+
+    </main>
+
+
+    <script src="https://allevents.in/scripts/public/ae-plugin-lib-button.js"></script>
+
+
+
+    <section id="contact">
+        <h1 class="section-heading mb50px">
+            <span>
+                <i class="far fa-address-card"></i>
+            </span>
+            <span> Contact </span>
+        </h1>
+        <div id="contact-container">
+
+            <div id="contact-form-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.969154203271!2d78.01683761475616!3d11.554068991796754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babe40754d8480f%3A0x4bf024dfe3e621ec!2sKnowledge%20Institute%20of%20Technology%20(KIOT)!5e0!3m2!1sen!2sin!4v1677211075163!5m2!1sen!2sin"
+                    width="480" height="260" style="border:0; margin-left: 10px;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div id="my-details-container">
+
+                <h3> Get In touch </h3>
+                <p > KIOT Campus,  <br> Knowledge Institute of Technology, Lorem ipsum dolor sit amet cons <br> Kakapalayam- 637504</p>
+
+                <h3> My Address </h3>
+                <div class="my-details-info-container">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Delhi, India</span>
+                </div>
+                <div class="my-details-info-container">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>9999999999</span>
+                </div>
+                <div class="my-details-info-container">
+                    <i class="far fa-envelope"></i>
+                    <span>myemail@gmail.com</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center social-icons">
+
+            <ul class="no-list-style horizontal-list">
+
+                <li>
+                    <a href="https://www.linkedin.com/in/manisha-khattar-b5663641/">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://stackoverflow.com/users/5608414/manisha?tab=profile" target="_blank">
+                        <i class="fab fa-stack-overflow"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://plus.google.com/u/0/103030702784925512939" target="_blank">
+                        <i class="fab fa-google-plus-g"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.facebook.com/manishakhattar54">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.quora.com/profile/Manisha-Khattar" target="_blank">
+                        <i class="fab fa-quora"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+
+</body>
+
+</html>
