@@ -9,6 +9,25 @@
     <link rel="stylesheet" type="text/css" href="main.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&display=swap" rel="stylesheet">
     <script src="https://allevents.in/scripts/public/ae-plugin-lib-button.js"></script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyAjPYxuO3gbxyzl6T0qwu8HLJd756bL0gg",
+          authDomain: "knowmeet-2023.firebaseapp.com",
+          projectId: "knowmeet-2023",
+          storageBucket: "knowmeet-2023.appspot.com",
+          messagingSenderId: "294491484850",
+          appId: "1:294491484850:web:5ffad45ae84e661e0e8fab"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+      </script>
     <style>
         * {
           box-sizing: border-box
@@ -430,6 +449,46 @@
 
 
     <script src="https://allevents.in/scripts/public/ae-plugin-lib-button.js"></script>
+    <!--FAQ-->
+    <div class='centerplease'>
+        FAQ accordion
+      </div>
+      <br>
+      
+      <div class="content">
+      <div>
+        <input type="checkbox" id="question1" name="q"  class="questions">
+        <div class="plus">+</div>
+        <label for="question1" class="question">
+          This is the question that will be asked?
+        </label>
+        <div class="answers">
+          What if the answer is really long and wraps the whole page and you never want to finish it but you have to because its the answer!
+        </div>
+      </div>
+      
+      <div>
+        <input type="checkbox" id="question2" name="q" class="questions">
+        <div class="plus">+</div>
+        <label for="question2" class="question">
+          Short?
+        </label>
+        <div class="answers">
+          short!
+        </div>
+      </div>
+        
+      <div>
+        <input type="checkbox" id="question3" name="q" class="questions">
+        <div class="plus">+</div>
+        <label for="question3" class="question">
+          But what if the question is really long and wraps the whole page and you feel like you will never finish reading the question?
+        </label>
+        <div class="answers">
+          This is the answer!
+        </div>
+      </div>
+      </div>
 
 
 
@@ -452,15 +511,10 @@
 
                 <h3> Get In touch </h3>
                 <p > KIOT Campus,  <br> Knowledge Institute of Technology, Lorem ipsum dolor sit amet cons <br> Kakapalayam- 637504</p>
-
-                <h3> My Address </h3>
-                <div class="my-details-info-container">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Delhi, India</span>
-                </div>
+                <br><br>
                 <div class="my-details-info-container">
                     <i class="fas fa-mobile-alt"></i>
-                    <span>9999999999</span>
+                    <span>9</span>
                 </div>
                 <div class="my-details-info-container">
                     <i class="far fa-envelope"></i>
